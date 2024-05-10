@@ -1,6 +1,0 @@
-[
-    { "productName": "商品1", "specification": "规格1", "materialNumber": "ABC123", "tmallID": "123456" },
-    { "productName": "商品2", "specification": "规格2", "materialNumber": "DEF456", "tmallID": "789012" },
-    { "productName": "商品2", "specification": "规格3", "materialNumber": "TEST01", "tmallID": "000012" }
-    // 在此添加更多商品数据
-]
