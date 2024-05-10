@@ -46,7 +46,10 @@
 <body>
     <div class="container">
         <h2>产品ID查询</h2>
-        <input type="text" id="materialNumber" placeholder="请输入物料号">
+        <input type="text" id="materialNumber" placeholder="请输入物料号（例如4.075.131，注意符号“.”非逗号，且必须使用英文符号，无空格）">
+
+
+
         <button onclick="searchProductID()">查询</button>
         <div id="result"></div>
         <table id="productTable">
