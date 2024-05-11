@@ -30,9 +30,9 @@
             margin-top: 20px;
         }
         table {
-            width: 100%;
+            width: 70%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin: 20px auto; /* 修改为使用 margin 属性来水平居中 */
         }
         th, td {
             border: 1px solid #dddddd;
@@ -41,23 +41,27 @@
         th {
             background-color: #f2f2f2;
         }
+        footer {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #888;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>产品ID查询</h2>
-        <input type="text" id="materialNumber" placeholder="请输入物料号（例如4.075.131，注意符号“.”非逗号，且必须使用英文符号，无空格）">
-
-
-
+        <h3>（不定期更新，当前数据更新时间：20240511）</h3>
+        <input type="text" id="materialNumber" placeholder="请输入物料号（例如4.075.131，注意符号“.”为点号，且必须使用英文符号无空格）" onkeydown="if(event.keyCode==13) searchProductID()">
         <button onclick="searchProductID()">查询</button>
         <div id="result"></div>
-        <table id="productTable">
+        <table id="productTable" style="display: none;">
             <thead>
                 <tr>
                     <th>商品名称</th>
                     <th>规格</th>
                     <th>物料号</th>
+                    <th>天猫是否上架</th>
                     <th>天猫平台ID</th>
                 </tr>
             </thead>
@@ -67,20 +71,35 @@
         </table>
     </div>
 
+    
+
     <script>
         // 查询商品ID
         function searchProductID() {
-            var materialNumber = document.getElementById("materialNumber").value;
-            fetch('https://raw.githubusercontent.com/paohai/TmallProduct/main/tmall_iddata_search.csv')
+            var materialNumber = document.getElementById("materialNumber").value.trim(); // 获取输入框的值，并去除首尾空格
+            if (materialNumber === "") {
+                alert("请输入产品料号");
+                return; // 如果输入为空，则直接返回，不执行后续查询操作
+            }
+
+            fetch('https://raw.githubusercontent.com/paohai/TmallProduct/main/products20240510.csv')
                 .then(response => response.text())
                 .then(csvData => {
                     var products = parseCsv(csvData);
-                    var foundProduct = products.find(product => product.materialNumber === materialNumber);
-                    if (foundProduct) {
-                        document.getElementById("result").innerText = "物料号：" + foundProduct.materialNumber + " 对应的产品ID是：" + foundProduct.tmallID;
-                        displayProduct(foundProduct);
+                    var foundProducts = products.filter(product => product.materialNumber === materialNumber);
+                    if (foundProducts.length > 0) {
+                        var result = "";
+                        foundProducts.forEach(foundProduct => {
+                            result += foundProduct.online === "是" ?
+                                "物料号：" + foundProduct.materialNumber + " >>>" +  " 对应的产品ID是：" + foundProduct.tmallID + "<br>" :
+                                "产品未上架天猫，未找到对应的产品ID" + "<br>";
+                        });
+                        document.getElementById("result").innerHTML = result;
+                        displayProducts(foundProducts);
+                        document.getElementById("productTable").style.display = "block"; // 显示表格
                     } else {
                         document.getElementById("result").innerText = "未找到对应的产品ID";
+                        document.getElementById("productTable").style.display = "none"; // 隐藏表格
                     }
                 })
                 .catch(error => console.error('Error fetching products:', error));
@@ -96,7 +115,8 @@
                     productName: parts[0],
                     specification: parts[1],
                     materialNumber: parts[2],
-                    tmallID: parts[3]
+                    online: parts[3],
+                    tmallID: parts[4]
                 };
                 products.push(product);
             }
@@ -104,17 +124,21 @@
         }
 
         // 在表格中显示商品信息
-        function displayProduct(product) {
+        function displayProducts(products) {
             var tableBody = document.getElementById("productTableBody");
             tableBody.innerHTML = '';
-            var row = tableBody.insertRow();
-            row.innerHTML = `
-                <td>${product.productName}</td>
-                <td>${product.specification}</td>
-                <td>${product.materialNumber}</td>
-                <td>${product.tmallID}</td>
-            `;
+            products.forEach(product => {
+                var row = tableBody.insertRow();
+                row.innerHTML = `
+                    <td>${product.productName}</td>
+                    <td>${product.specification}</td>
+                    <td>${product.materialNumber}</td>
+                    <td>${product.online}</td>
+                    <td>${product.tmallID}</td>
+                `;
+            });
         }
     </script>
+    <footer>&copy; 脑洞传播 HJF</footer>
 </body>
 </html>
