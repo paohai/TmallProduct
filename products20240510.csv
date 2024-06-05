@@ -17,8 +17,8 @@ AC/DC TIG,MW4000 JOB 氩弧焊机(AC/DC),4.075.133,是,739745376885
 AC/DC TIG,MW5000 JOB 氩弧焊机(AC/DC),4.075.135,是,739745376885
 Plasma,PM10等离子发生器,4.075.146,是,739944329689
 车架,移动车架,02*4.045.839,是,739771428920
-送丝机支架,送丝机支架,02*4.100.218,否,
-TT2200支架,TT2200支架,02*4.100.218-TT2200,否,
+送丝机支架,送丝机支架,02*4.100.218,是,803079972348
+TT2200支架,TT2200支架,02*4.100.218-TT2200,是,803079972348
 底架,固定底座,02*4.045.881,是,740169995349
 底架,固定底座,02*4.077.001,是,740169995349
 固定片,固定片,BP2.0200.8837,是,739954301236
@@ -833,21 +833,21 @@ TPSI电源线,Mains cable 4G4mm? 10m E5 32A H07RN-F  电源线,02*43.0004.0987-1
 TPSI电源线,Mains cable 4G4mm? 15m E5 32A H07RN-F  电源线,02*43.0004.0987-15m,否,
 TPSI电源线,Mains cable 4G4mm? 20m E5 32A H07RN-F  电源线,02*43.0004.0987-20m,否,
 TPSI电源线,Mains cable 4G4mm? 25m E5 32A H07RN-F  电源线,02*43.0004.0987-25m,否,
-TPSI送丝轮,Feeder roll U 0.6,44.0001.1428,否,
-TPSI送丝轮,Feeder roll U 0.8,44.0001.1405,否,
-TPSI送丝轮,Feeder roll U 0.9-1.0,44.0001.1406,否,
-TPSI送丝轮,Feeder roll U 1.2  ,44.0001.1407,否,
-TPSI送丝轮,Feeder roll U 1.4-1.6,44.0001.1408,否,
-TPSI送丝轮,Feeder roll U 2.0,44.0001.1502,否,
-TPSI送丝轮,Feeder roll U 2.4,44.0001.1503,否,
-TPSI送丝轮,Feeder roll U 2.8,44.0001.1504,否,
-TPSI送丝轮,Feeder roll 1.2 R,44.0001.1431,否,
-TPSI送丝轮,Feeder roll 1.4 R,44.0001.1432,否,
-TPSI送丝轮,Feeder roll 1.6 R,44.0001.1433,否,
-TPSI送丝轮,Feeder roll 2.0 R,44.0001.1423,否,
-TPSI送丝轮,Feeder roll 2.4 R,44.0001.1424,否,
-TPSI送丝轮,Feeder roll R 2.8,44.0001.1425,否,
-TPSI送丝轮,Feeder roll R 3.2,44.0001.1426,否,
+TPSI送丝轮,Feeder roll U 0.6,44.0001.1428,是,798968926206
+TPSI送丝轮,Feeder roll U 0.8,44.0001.1405,是,798968926206
+TPSI送丝轮,Feeder roll U 0.9-1.0,44.0001.1406,是,798968926206
+TPSI送丝轮,Feeder roll U 1.2  ,44.0001.1407,是,798968926206
+TPSI送丝轮,Feeder roll U 1.4-1.6,44.0001.1408,是,798968926206
+TPSI送丝轮,Feeder roll U 2.0,44.0001.1502,是,798968926206
+TPSI送丝轮,Feeder roll U 2.4,44.0001.1503,是,798968926206
+TPSI送丝轮,Feeder roll U 2.8,44.0001.1504,是,798968926206
+TPSI送丝轮,Feeder roll 1.2 R,44.0001.1431,是,798968926206
+TPSI送丝轮,Feeder roll 1.4 R,44.0001.1432,是,798968926206
+TPSI送丝轮,Feeder roll 1.6 R,44.0001.1433,是,798968926206
+TPSI送丝轮,Feeder roll 2.0 R,44.0001.1423,是,798968926206
+TPSI送丝轮,Feeder roll 2.4 R,44.0001.1424,是,798968926206
+TPSI送丝轮,Feeder roll R 2.8,44.0001.1425,是,798968926206
+TPSI送丝轮,Feeder roll R 3.2,44.0001.1426,是,798968926206
 TPSI送丝机,WF 25i /4R/G/FSC ,4.049.031,否,
 TPSI送丝机,WF 30i /4R/W/FSC ,4.049.032,否,
 TPSI送丝机,WF 15i R /4R/W/FSC ,4.049.033,否,
@@ -887,8 +887,8 @@ TPSI中继线,HP 70i CON W/15m,02*4.047.851,是,779591297062
 TPSI中继线,HP 95i CON /W/15m,02*4.047.852,是,779591297062
 TPSI中继线,HP 70i CON W/20m,02*4.047.853,是,779591297062
 TPSI中继线,HP 95i CON W/20m,02*4.047.854,是,779591297062
-焊机小车,Carriage PickUp  小车,02*4.077.002,否,
-焊机小车,OPT/TU turning pintle mounting WF15i-30i / VR5000 小车横梁,02*4.100.613,否,
+焊机小车,Carriage PickUp  小车,02*4.077.002,是,739771428920
+焊机小车,OPT/TU turning pintle mounting WF15i-30i / VR5000 小车横梁,02*4.100.613,是,803079972348
 焊机小车,Carriage Trabant WF25i/WF30i送丝机小车,02*4.077.004,否,
 气冷焊枪,MTG 250i /FSC/3.5m/45 ,4.035.921,是,794696983139
 气冷焊枪,MTG 250i /FSC/4.5m/45 ,4.035.924,是,794696983139
@@ -1138,10 +1138,10 @@ M8 for MTG 320i / MTG 400i / MTW 320i / MTW 500i /MTW 710,Contact tip 2.8 / M8x1
 导电咀M8焊铝,Contact tip 1.0 / M8x1.5 / D10x32 Al ,42.0001.4750.10,否,
 导电咀M8焊铝,Contact tip 1.2 / M8x1.5 / D10x32 Al ,42.0001.4751.10,否,
 导电咀M8焊铝,Contact tip 1.6 / M8x1.5 / D10x32 Al ,42.0001.4752.10,否,
-TPS600I机器人地线,GroundCable 95i R PC/4m,02*43.0004.4982,否,
-TPS600I机器人地线,GroundCable 95i R PC/10m,02*43.0004.4983,否,
-TPS600I机器人地线,GroundCable 95i R PC/15m,02*43.0004.4983-15m,否,
-TPS600I机器人地线,GroundCable 95i CL/PC/30m cable lug / PC male,02*43.0004.4983-30M,否,
+TPS600I机器人地线,GroundCable 95i R PC/4m,02*43.0004.4982,是,798720749976
+TPS600I机器人地线,GroundCable 95i R PC/10m,02*43.0004.4983,是,798720749976
+TPS600I机器人地线,GroundCable 95i R PC/15m,02*43.0004.4983-15m,是,798720749976
+TPS600I机器人地线,GroundCable 95i CL/PC/30m cable lug / PC male,02*43.0004.4983-30M,是,798720749976
 地线配件,Current plug 50-70mm?/600A,02*43.0003.0019,否,
 地线配件,Cable coupling M,02*43.0003.0062,否,
 地线配件,Cable coupling 50- 70mm?,02*43.0003.0064,否,
